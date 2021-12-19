@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+        <!-- sidebar section -->
+      <div class="sidebar">
+        <i class="fas fa-bars"></i>
+        <div class="sidebar-icons">
+          <i class="fas fa-calendar-alt"></i>
+          <i class="fas fa-info-circle"></i>
+          <i class="far fa-bookmark"></i>
+          <i class="far fa-comment-alt"></i>
+          <i class="far fa-folder"></i>
+          <i class="far fa-smile"></i>
+          <i class="far fa-bell"></i>
+        </div>
+      </div>
+      <div class="main-body">
+          <!-- navbar section -->
+        <div class="navbar">
+          <div class="navbar-container">
+            <a class="nav-logo">
+              <div class="logo-container">
+                <div class="logo"><img src="images/logo.png" alt="logo" /></div>
+                <h3>Fundamentals of Financial Management</h3>
+              </div></a
+            >
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a class="nav-link"
+                  ><div class="user-container">
+                    <div class="user">
+                      <img src="images/user.png" alt="user" />
+                    </div>
+                    <h4>Segun Araromi</h4>
+                    <i class="fas fa-angle-down"></i></div
+                ></a>
+              </li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+            <!-- notification section -->
+          <div class="notification">
+            <div class="notification-bell">
+              <i class="far fa-bell"></i>
+            </div>
+            <div class="notification-text">
+              <i class="fas fa-angle-left"></i>
+              <p>
+                Our team of learning experts have designed a suite of practical
+                programs that develop both your execution excellence
+                capabilities and enable you to stay a step ahead.
+              </p>
+              <i class="fas fa-angle-right"></i>
+            </div>
+          </div>
+
+          <!-- about section -->
+          <h3 class="about">About the Course</h3>
+          <div class="about-text">
+            Our team of learning experts have designed a suite of practical
+            programs that develop both your execution excellence capabilities
+            and enable you to stay a step ahead.
+          </div>
+
+          <!-- features section -->
+          <div class="features">
+              <h4>Course Features</h4>
+              <div class="feature-list">
+                  <div class="feature">Level</div>
+                  <div class="value">Beginner</div>
+              </div>
+              <div class="feature-list">
+                <div class="feature">Commitment</div>
+                <div class="value">3 hours a Week, for 15 Weeks</div>
+            </div>
+            <div class="feature-list">
+                <div class="feature">How To Pass</div>
+                <div class="value">Pass all graded assignments to complete the course.</div>
+            </div>
+            <div class="feature-list">
+                <div class="feature">Language</div>
+                <div class="value">English, Subtitles: Arabic, French, Portuguese (European), Italian, Portuguese (Brazilian), Vietnamese, Korean, German, Russian, Spanish, Japanese§</div>
+            </div>
+          </div>
+
+          <!-- instructors section -->
+          <div class="instructors">
+              <h4>Course Instructors</h4>
+              <div class="instructor-list">
+                <div class="instructor">
+                    <div class="instructor-img"><img src="images/instructor.png" alt="instructor one" /></div>
+                  <span><div class="name">Segun Araromi</div>
+                    <div class="role">Instructor</div></span>  
+                </div>
+                <div class="instructor">
+                    <div class="instructor-img"><img src="images/instructor.png" alt="instructor two" /></div>
+                    <span><div class="name">Gbanga Guzeh</div>
+                        <div class="role">Course Manager</div></span>  
+                </div>
+                <div class="instructor">
+                    <div class="instructor-img"><img src="images/instructor.png" alt="instructor three" /></div>
+                    <span><div class="name">Peniel Chidumaga</div>
+                        <div class="role">Course Assistant</div></span>  
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+      const navLink = document.querySelectorAll(".nav-link");
+
+      navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+      function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
