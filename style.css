@@ -177,7 +177,7 @@ a {
     flex-direction: column;
     gap: 1rem;
 }
-.features h4, .instructors h4 .objectives h4{
+.features h4, .instructors h4, .objectives h4{
     color: #167C1A;
 }
 .feature-list{
