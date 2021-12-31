@@ -232,6 +232,7 @@ a {
 .container {
   width: 50%;
   margin: 5rem auto 0 auto;
+  padding-bottom: 9%;
 }
 
 /* Notification section */
@@ -425,6 +426,24 @@ a {
   
 }
 
+.accordion1 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  padding: 0.5rem 0;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+  transition: 0.4s;
+}
+.active, .accordion1:hover {
+  background-color: #ccc; 
+}
+
 .accordion {
   display: flex;
   align-items: center;
@@ -439,6 +458,11 @@ a {
   font-size: 12px;
   transition: 0.4s;
 }
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+
 
 .answer {
   font-weight: 300;
