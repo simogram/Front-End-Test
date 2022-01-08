@@ -16,47 +16,36 @@ function closeMenu() {
   navMenu.classList.remove("active");
 }
 
-// function for accordion1
-let accordionn = document.getElementsByClassName("accordion1");
+// function for accordion
+let accordion = document.getElementsByClassName("accordion");
+let mainaccordion = document.getElementsByClassName("main-accordion");
 
-for (let i = 0; i < accordionn.length; i++) {
-  accordionn[i].addEventListener("click", function () {
-    if (this.childNodes[1].classList.contains("fa-angle-down")) {
-      this.childNodes[1].classList.remove("fa-angle-down");
-      this.childNodes[1].classList.add("fa-angle-up");
+for (let i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function () {
+    if (this.childNodes[1].classList.contains("fa-plus")) {
+      this.childNodes[1].classList.remove("fa-plus");
+      this.childNodes[1].classList.add("fa-minus");
     } else {
-      this.childNodes[1].classList.remove("fa-angle-up");
-      this.childNodes[1].classList.add("fa-angle-down");
+      this.childNodes[1].classList.remove("fa-minus");
+      this.childNodes[1].classList.add("fa-plus");
     }
-    {
-      let content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
+
+    let content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
     }
   });
+}
 
-
-  // function for accordion
-  let accordion = document.getElementsByClassName("accordion");
-
-  for (let i = 0; i < accordion.length; i++) {
-    accordion[i].addEventListener("click", function () {
-      if (this.childNodes[1].classList.contains("fa-plus")) {
-        this.childNodes[1].classList.remove("fa-plus");
-        this.childNodes[1].classList.add("fa-minus");
-      } else {
-        this.childNodes[1].classList.remove("fa-minus");
-        this.childNodes[1].classList.add("fa-plus");
-      }
-
-      let content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
-    });
-}}
+for (let i = 0; i < mainaccordion.length; i++) {
+  mainaccordion[i].addEventListener("click", function () {
+    let content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
