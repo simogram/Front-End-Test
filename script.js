@@ -45,7 +45,7 @@ for (let i = 0; i < mainaccordion.length; i++) {
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.maxHeight = 500 + "px";
     }
   });
 }
